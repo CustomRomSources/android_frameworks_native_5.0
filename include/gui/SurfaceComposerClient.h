@@ -85,6 +85,11 @@ public:
     /* Triggers screen on/off or low power mode and waits for it to complete */
     static void setDisplayPowerMode(const sp<IBinder>& display, int mode);
 
+    // TODO: Remove me.  Do not use.
+    // This is a compatibility shim for one product whose drivers are depending on
+    // this legacy function (when they shouldn't).
+    static status_t getDisplayInfo(int32_t displayId, DisplayInfo* info);
+
     // ------------------------------------------------------------------------
     // surface creation / destruction
 
