@@ -296,6 +296,9 @@ private:
 
     class FlattenableHelperInterface {
     protected:
+#ifdef STE_HARDWARE
+        virtual
+#endif
         ~FlattenableHelperInterface() { }
     public:
         virtual size_t getFlattenedSize() const = 0;
